@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+D:/Documents/code/C&C++Learning/WDCLanguage/07/7.2/1-function/fun.c
+fun.h
+D:/Documents/code/C&C++Learning/WDCLanguage/07/7.2/1-function/fun.h
+
+D:/Documents/code/C&C++Learning/WDCLanguage/07/7.2/1-function/fun.h
+stdio.h
+-
+string.h
+-
+stdlib.h
+-
+
+D:/Documents/code/C&C++Learning/WDCLanguage/07/7.2/1-function/main.c
+fun.h
+D:/Documents/code/C&C++Learning/WDCLanguage/07/7.2/1-function/fun.h
+
