@@ -83,3 +83,50 @@ typedef int INTEGER;
 //一个整形的别名
 ```
 
+# 8.4 C++引用（提高便捷性）
+
+1. 使用引用后，子函数内的操作和函数外操作手法一致（形式一致）
+
+```c
+void ModifyNum(int &b){
+    b = b+1;
+}//作用就相当于*b
+int a = 10;
+ModifyNum(a);
+
+//与下面代码等价：
+void ModifyNum(int *b){
+    *b = *b+1;
+}
+int a = 10;
+ModifyNum(&a);
+```
+
+2. 在子函数从修改一级指针变量的值的注意事项
+
+```c
+//修改主函数一级指针变量的值
+void ModifyPointer(int* &p,int *q)
+//C++规定引用&必须和变量紧邻
+{
+    p = q;
+}
+
+    int *p = NULL;
+    int i = 10;
+    int *q = &i;
+    ModifyPointer(p,q);
+//p指针的值变为10，q指针的值不变
+```
+
+上述代码在C语言中由二级指针实现（初试机试不用，但有机会应该了解）
+
+3. C++的布尔类型
+
+C中没有，但C++有：true和false
+
+```c
+true = 1;
+false = 0;
+```
+
