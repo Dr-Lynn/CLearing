@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+D:/Documents/code/C&C++Learning/WDCLanguage/08/8.3/1-StructPoint/main.c
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+

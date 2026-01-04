@@ -32,5 +32,54 @@ f(n) = n*f(n-1)  递归的核心是找公式
 
 eg：一个结构体元素最大的是double类型，则结构体的大小是8的整数倍（字节个数）
 
+`sizeof(s1) //计算出s1包含多少个字节`
 
+# 8.3 结构体指针和typedef
+
+1. 一个结构体变量的指针就是该变量所占据的内存段的起始地址，结构体指针可以访问结构体内的每个成员
+2. 结构体指针可以指向结构体数组，其中保存的是结构体数组的首地址：
+
+```c
+struct student sarr[3] = {1001,"lilei",'M',1005,"zhangsan",'M',1007,"lili",'F'};
+//给结构体数组初始化赋值
+struct student *p;
+p = &sarr;
+printf("%d %s %c\n",p->num,p->name,p->sex);
+```
+
+结构体指针可以自+1来指向数组的下一个元素：
+
+`p = p+1;` 偏移量为一个该类型的大小
+
+3. 给结构体指针申请空间并赋值：
+
+```c
+p = (struct student*)malloc(sizeof(struct student));
+//申请一块结构体大小的空间，malloc会返回int类型，所以要强制转换成结构体指针类型
+p->num = 1006;
+p->sex = 'M';
+strcpy(p->name,"longge");
+//p->name = "longge";字符串不能直接赋值，需要用库函数strcpy()
+```
+
+4. 结构体指针p的大小仍然是一个int类型指针的大小，但它之前申请的空间的大小为结构体的大小：
+
+![](D:\Documents\code\C&C++Learning\WDCLanguage\imgs\屏幕截图 2026-01-04 170611.png)
+
+5. typedef可以用来简化结构体名称（取别名）
+
+```c
+typedef struct student{
+    int num;
+    char name[20];
+    char sex;
+}stu,*pstu;
+//stu等价于struct student，pstu等价于struct student*
+//stu s = {1001,"wangle",'M'};
+//pstu p;等价于stu *p; 定义一个结构体指针变量
+//p = &s;
+
+typedef int INTEGER;
+//一个整形的别名
+```
 

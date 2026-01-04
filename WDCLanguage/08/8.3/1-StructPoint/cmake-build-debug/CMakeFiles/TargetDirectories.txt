@@ -1,0 +1,3 @@
+D:/Documents/code/C&C++Learning/WDCLanguage/08/8.3/1-StructPoint/cmake-build-debug/CMakeFiles/1_StructPoint.dir
+D:/Documents/code/C&C++Learning/WDCLanguage/08/8.3/1-StructPoint/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/Documents/code/C&C++Learning/WDCLanguage/08/8.3/1-StructPoint/cmake-build-debug/CMakeFiles/rebuild_cache.dir
